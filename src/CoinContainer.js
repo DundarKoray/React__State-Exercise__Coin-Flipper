@@ -28,6 +28,8 @@ class CoinContainer extends Component {
             return {
                 currCoin: newCoin,
                 nFlips: st.nFlips + 1,
+                nHeads: st.nHeads + (newCoin.side === "heads" ? 1 : 0),
+                nTails: st.nTails + (newCoin.side === "tails" ? 1 : 0)
             }
         })
     }
