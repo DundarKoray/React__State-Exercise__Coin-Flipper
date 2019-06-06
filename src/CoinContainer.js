@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { choice } from './helpers'
 
 class CoinContainer extends Component {
     static defaultProps = {
@@ -21,7 +22,14 @@ class CoinContainer extends Component {
 
 
     flipCoin(){
-
+        //choice is a function that takes an array as parameter and returns a random index item  eg. fruits[randomIndex]. This is the function that randomly picks if the coin's side is heads or tails.
+        const newCoin = choice(this.props.coins)
+        this.setState(st => {
+            return {
+                currCoin: newCoin,
+                nFlips: st.nFlips + 1,
+            }
+        })
     }
 
     handleClick(e){
