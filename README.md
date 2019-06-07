@@ -9,7 +9,7 @@ Click the link below to see the app.<br/>
 
 # Preview
 
-![Coin Flipper - Preview](./preview.gif)
+![Coin Flipper - Preview](./src/preview.gif)
 
 # Author
 
